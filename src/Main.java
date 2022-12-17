@@ -21,6 +21,7 @@ public class Main {
 
         console.close();
     }
+    // Задача 1
 
     private static void task1(int console) {
 
@@ -31,23 +32,16 @@ public class Main {
         }
     }
 
-    private static void task2(int clientOS, int clientDeviceYear) {
-        downloadApp(clientOS, clientDeviceYear);
-    }
-
-    private static void task3(int deliveryDays) {
-
-        if (deliveryDays < 0) {
-            System.out.println("Доставки нет.");
-        } else {
-            System.out.printf("Потребуется дней: %d %n", deliveryDays);
-        }
-    }
-
     private static boolean isLeapYear(int year) {
         return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 
+
+    // Задача 2
+
+    private static void task2(int clientOS, int clientDeviceYear) {
+        downloadApp(clientOS, clientDeviceYear);
+    }
 
     private static void downloadApp(int os, int yearDevice) {
         int currentYear = LocalDate.now().getYear();
@@ -66,6 +60,17 @@ public class Main {
             }
     }
 
+    // Задача 3
+
+    private static void task3(int deliveryDays) {
+
+        if (deliveryDays < 0) {
+            System.out.println("Доставки нет.");
+        } else {
+            System.out.printf("Потребуется дней: %d %n", deliveryDays);
+        }
+    }
+
     private static int deliveryDays(int deliveryDistance) {
         int deliveryDays;
         if (deliveryDistance <= 20) {
@@ -80,3 +85,4 @@ public class Main {
         return deliveryDays;
     }
 }
+
