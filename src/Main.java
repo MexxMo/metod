@@ -53,13 +53,13 @@ public class Main {
         int currentYear = LocalDate.now().getYear();
 
         if (os == 0)
-            if (yearDevice > currentYear) {
+            if (yearDevice == currentYear) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
         if (os == 1)
-            if (yearDevice > currentYear) {
+            if (yearDevice == currentYear) {
                 System.out.println("Установите версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
